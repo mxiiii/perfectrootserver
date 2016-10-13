@@ -39,6 +39,7 @@ else
 
                 if [[ -v BLOCKED_PORTS[$SSH_PORT] ]]; then
 					echo "$SSH_PORT is known. Choose another SSH Port!"
+					exit 1
 				else
 					#You can use this Port
 					echo "${ok} Great, your SSH Port is: $SSH_PORT" | awk '{ print strftime("[%H:%M:%S] |"), $0 }'
